@@ -5,5 +5,5 @@ ARG VERSION=1.0
 COPY --chown=1001:0 src/main/liberty/config /config/
 RUN features.sh
 COPY --chown=1001:0 target/system.war /config/apps
-
+ARG VERBSOE=true
 RUN configure.sh
